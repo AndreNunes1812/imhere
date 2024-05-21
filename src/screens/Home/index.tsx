@@ -4,6 +4,10 @@ import {styles} from './styles';
 import React from 'react';
 
 export function Home() {
+  function handleParticipantAdd() {
+    console.log('Você clicou no botão adcionar');
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>Nome do Evento</Text>
@@ -15,7 +19,7 @@ export function Home() {
         placeholderTextColor="$6B6B6B"
       />
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
         <Text style={styles.buttonText}>+</Text>
       </TouchableOpacity>
     </View>
